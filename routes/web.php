@@ -20,3 +20,4 @@ Route::get('/', function () {
 Route::post('/userLogin', 'UserController@Login');
 Route::get('/clientbyuser/{id?}', 'ClientController@findByUser');
 Route::get('/contactbyclient/{id?}', 'ContactController@findByClient');
+Route::get('/contactsbyuser/{id?}', 'ContactController@findByUser' );

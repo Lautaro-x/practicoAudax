@@ -23,7 +23,7 @@ class UserController extends Controller
         if ($validate->fails()) {
             /* la validacion fallo */
             $data = array(
-                'status' => 404,
+                'status' => 400,
                 'message' => 'El usuario no se ha podido identificar',
                 'errors' => $validate->errors()
             );
@@ -45,7 +45,7 @@ class UserController extends Controller
             }
             else{
                 $data = array(
-                    'status' => 404,
+                    'status' => 400,
                     'message' => 'El usuario no se ha podido identificar',
                     'errors' => 'Contraseña no valida'
                 );
