@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/userLogin', 'UserController@Login');
+Route::get('/clientbyuser/{id?}', 'ClientController@findByUser');
+Route::get('/contactbyclient/{id?}', 'ContactController@findByClient');
